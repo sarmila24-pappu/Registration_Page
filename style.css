@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f7f8fa;
+}
+
+header {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #0a0f1a;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.progress-container {
+  display: none;
+  justify-content: center;
+  margin: 30px 0;
+  align-items: center;
+}
+
+.step {
+  text-align: center;
+  width: 100px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #0a0f1a;
+  color: white;
+  display: inline-block;
+  line-height: 30px;
+}
+
+.inactive {
+  background-color: #ccc;
+}
+
+.line {
+  width: 80px;
+  height: 2px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.form-container {
+  background-color: white;
+  width: 350px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #0a0f1a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: gray;
+  font-size: 14px;
+}

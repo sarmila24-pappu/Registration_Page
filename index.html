@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Multi-Step Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">CompanyName</div>
+    <div class="auth-buttons">
+      <button onclick="showLogin()">Login</button>
+      <button onclick="showRegister()">Register</button>
+    </div>
+  </header>
+
+  <div class="progress-container" id="progress">
+    <div class="step">
+      <div class="circle" id="circle1">1</div>
+      <div>Registration</div>
+    </div>
+    <div class="line"></div>
+    <div class="step">
+      <div class="circle inactive" id="circle2">2</div>
+      <div>Payment</div>
+    </div>
+    <div class="line"></div>
+    <div class="step">
+      <div class="circle inactive" id="circle3">3</div>
+      <div>Submission</div>
+    </div>
+  </div>
+
+  <div class="form-container" id="loginForm">
+    <h2>Login</h2>
+    <form onsubmit="login(event)">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button class="submit-btn" type="submit">Login</button>
+    </form>
+  </div>
+
+  <div class="form-container" id="registerForms" style="display: none;">
+    <form id="step1" class="form-step">
+      <h2>Personal Information</h2>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="button" class="submit-btn" onclick="goToStep(2)">Continue to Payment</button>
+    </form>
+
+    <form id="step2" class="form-step" style="display: none;">
+      <h2>Payment Information</h2>
+      <input type="text" placeholder="Card Number" required>
+      <input type="text" placeholder="Expiry Date" required>
+      <input type="text" placeholder="CVV" required>
+      <button type="button" class="submit-btn" onclick="goToStep(3)">Continue to Submission</button>
+    </form>
+
+    <form id="step3" class="form-step" style="display: none;" onsubmit="submitForm(event)">
+      <h2>Confirm & Submit</h2>
+      <p>Review your details and submit your registration.</p>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <footer>
+    © 2025 CompanyName. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
