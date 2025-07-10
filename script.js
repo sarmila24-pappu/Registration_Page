@@ -37,6 +37,9 @@ function login(event) {
 function submitForm(event) {
   event.preventDefault();
   alert("🎉 Registration submitted successfully!");
+  setTimeout(function() {
+    window.location.href = "index.html";
+  }, 1000);
 }
 
 // Show login form by default
